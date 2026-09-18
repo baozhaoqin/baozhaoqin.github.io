@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{site.title}}</title>
+  <meta name="description" content="{{site.description}}" />
+  <meta name="author" content="{{site.author}}" />
+
+  <!-- 样式按层引入：变量 → 基础 → 布局 → 组件 -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+{{> nav}}
+
+<main id="top">
+{{> hero}}
+{{> about}}
+{{> projects}}
+{{> notes}}
+{{> contact}}
+</main>
+
+{{> footer}}
+{{> scripts}}
+</body>
+</html>

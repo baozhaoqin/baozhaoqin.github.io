@@ -1,0 +1,18 @@
+<section class="section" id="notes">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">{{notes.num}}</span>{{notes.title}}</h2>
+    <p class="section-sub">{{notes.sub}}</p>
+
+    <ul class="note-list">
+      {{#for notes.items as note}}
+      <li>
+        <a href="{{note.url}}">
+          <span class="note-date">{{note.date}}</span>
+          <span class="note-title">{{note.title}}</span>
+          <span class="note-arrow">→</span>
+        </a>
+      </li>
+      {{/for}}
+    </ul>
+  </div>
+</section>

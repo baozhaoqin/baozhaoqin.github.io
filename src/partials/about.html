@@ -1,0 +1,22 @@
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">{{about.num}}</span>{{about.title}}</h2>
+    <div class="about-grid">
+      {{#for about.cards as card}}
+      <div class="card">
+        <h3>{{card.title}}</h3>
+        {{#for card.paragraphs as p}}
+        <p>{{p}}</p>
+        {{/for}}
+        {{#if card.tags}}
+        <ul class="tag-list">
+          {{#for card.tags as tag}}
+          <li>{{tag}}</li>
+          {{/for}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/for}}
+    </div>
+  </div>
+</section>

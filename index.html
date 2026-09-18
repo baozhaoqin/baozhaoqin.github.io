@@ -5,242 +5,221 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>baozhaoqin · Personal Homepage</title>
   <meta name="description" content="覃宝钊 的个人主页 —— 独立开发者，记录项目、学习笔记与联系方式。" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="author" content="覃宝钊" />
+
+  <!-- 样式按层引入：变量 → 基础 → 布局 → 组件 -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
   <link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
-  <!-- ===== 顶部导航 ===== -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#top">
-        <span class="brand-dot"></span>baozhaoqin
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-dot"></span>baozhaoqin
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#about">关于我</a>
+
+      <a href="#projects">项目</a>
+
+      <a href="#notes">学习笔记</a>
+
+      <a href="#contact">联系</a>
+
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="切换主题">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="avatar">BZ</div>
+    <p class="hero-hello">Hi, I'm</p>
+    <h1 class="hero-name">覃宝钊</h1>
+    <p class="hero-tagline">独立开发者 · 热爱独立开发，保持持续学习</p>
+    <p class="hero-desc">我是覃宝钊，一名独立开发者。这里记录我做的项目、整理的学习笔记，以及一路上不断学习和折腾的想法。欢迎随便逛逛。</p>
+    <div class="hero-btns">
+
+      <a class="btn btn-primary" href="#projects">看看我的项目</a>
+
+      <a class="btn btn-ghost" href="https://github.com/baozhaoqin" target="_blank" rel="noopener">GitHub</a>
+
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">01</span>关于我</h2>
+    <div class="about-grid">
+
+      <div class="card">
+        <h3>👋 简单介绍</h3>
+
+        <p>你好，我是 <strong>覃宝钊</strong>，一名独立开发者。平时热爱独立开发，也始终保持着不断学习的心态，喜欢用代码把想法做成看得见的产品。</p>
+
+        <p>这个网站是我的技术自留地，会持续更新项目、学习记录与踩坑总结。</p>
+
+      </div>
+
+      <div class="card">
+        <h3>🧰 正在折腾</h3>
+
+        <ul class="tag-list">
+
+          <li>独立开发</li>
+
+          <li>HTML / CSS / JavaScript</li>
+
+          <li>Python</li>
+
+          <li>持续学习</li>
+
+        </ul>
+
+      </div>
+
+      <div class="card">
+        <h3>🎯 目标</h3>
+
+        <p>坚持独立开发，把脑中的想法落地成真正能用的产品；保持每天学习一点点，把零散的知识串成自己的体系。</p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="section section-alt" id="projects">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">02</span>项目</h2>
+    <p class="section-sub">一些我在做的东西，点标题可以跳到对应仓库。</p>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3><a href="https://github.com/baozhaoqin" target="_blank" rel="noopener">个人主页</a></h3>
+          <span class="dot"></span>
+        </div>
+        <p>就是你正在看的这个页面，纯静态、零依赖，托管在 GitHub Pages 上。</p>
+        <ul class="tag-list small">
+
+          <li>HTML</li>
+
+          <li>CSS</li>
+
+          <li>GitHub Pages</li>
+
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3><a href="https://github.com/baozhaoqin" target="_blank" rel="noopener">学习笔记仓库</a></h3>
+          <span class="dot"></span>
+        </div>
+        <p>把刷题与课程笔记结构化整理，方便复习与检索。</p>
+        <ul class="tag-list small">
+
+          <li>Markdown</li>
+
+          <li>笔记</li>
+
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3><a href="https://github.com/baozhaoqin" target="_blank" rel="noopener">待补充项目</a></h3>
+          <span class="dot"></span>
+        </div>
+        <p>这里留给下一个想法，做出来了就补上。</p>
+        <ul class="tag-list small">
+
+          <li>敬请期待</li>
+
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section class="section" id="notes">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">03</span>学习笔记</h2>
+    <p class="section-sub">持续更新中，记录一些踩坑与总结。</p>
+
+    <ul class="note-list">
+
+      <li>
+        <a href="#">
+          <span class="note-date">2026-09</span>
+          <span class="note-title">如何用 GitHub Pages 免费搭建个人网站</span>
+          <span class="note-arrow">→</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="note-date">2026-09</span>
+          <span class="note-title">GitHub Desktop 常用操作速查</span>
+          <span class="note-arrow">→</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="note-date">2026-09</span>
+          <span class="note-title">我的学习方法与复盘习惯</span>
+          <span class="note-arrow">→</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</section>
+<section class="section section-alt" id="contact">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">04</span>联系我</h2>
+    <p class="section-sub">欢迎交流，任何问题都可以找我。</p>
+
+    <div class="contact-grid">
+
+      <a class="contact-card" href="https://github.com/baozhaoqin" target="_blank" rel="noopener">
+        <span class="contact-icon">🐙</span>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">@baozhaoqin</span>
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#about">关于我</a>
-        <a href="#projects">项目</a>
-        <a href="#notes">学习笔记</a>
-        <a href="#contact">联系</a>
-      </nav>
+      <a class="contact-card" href="mailto:your-email@example.com">
+        <span class="contact-icon">✉️</span>
+        <span class="contact-label">Email</span>
+        <span class="contact-value">your-email@example.com</span>
+      </a>
 
-      <div class="nav-actions">
-        <button class="theme-btn" id="themeBtn" type="button" aria-label="切换主题">
-          <span id="themeIcon">🌙</span>
-        </button>
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="菜单">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
-  </header>
+  </div>
+</section>
+</main>
 
-  <main id="top">
-    <!-- ===== 首屏 ===== -->
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <div class="avatar">BZ</div>
-        <p class="hero-hello">Hi, I'm</p>
-        <h1 class="hero-name">覃宝钊</h1>
-        <p class="hero-tagline">
-          独立开发者 · 热爱独立开发，保持持续学习
-        </p>
-        <p class="hero-desc">
-          我是覃宝钊，一名独立开发者。这里记录我做的项目、整理的学习笔记，
-          以及一路上不断学习和折腾的想法。欢迎随便逛逛。
-        </p>
-        <div class="hero-btns">
-          <a class="btn btn-primary" href="#projects">看看我的项目</a>
-          <a class="btn btn-ghost" href="https://github.com/baozhaoqin" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 关于我 ===== -->
-    <section class="section" id="about">
-      <div class="wrap">
-        <h2 class="section-title"><span class="num">01</span>关于我</h2>
-        <div class="about-grid">
-          <div class="card">
-            <h3>👋 简单介绍</h3>
-            <!-- 改成你自己的介绍 -->
-            <p>
-              你好，我是 <strong>覃宝钊</strong>，一名独立开发者。平时热爱独立开发，
-              也始终保持着不断学习的心态，喜欢用代码把想法做成看得见的产品。
-            </p>
-            <p>
-              这个网站是我的技术自留地，会持续更新项目、学习记录与踩坑总结。
-            </p>
-          </div>
-          <div class="card">
-            <h3>🧰 正在折腾</h3>
-            <ul class="tag-list">
-              <li>独立开发</li>
-              <li>HTML / CSS / JavaScript</li>
-              <li>Python</li>
-              <li>持续学习</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>🎯 目标</h3>
-            <p>
-              坚持独立开发，把脑中的想法落地成真正能用的产品；
-              保持每天学习一点点，把零散的知识串成自己的体系。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 项目 ===== -->
-    <section class="section section-alt" id="projects">
-      <div class="wrap">
-        <h2 class="section-title"><span class="num">02</span>项目</h2>
-        <p class="section-sub">一些我在做的东西，点标题可以跳到对应仓库。</p>
-
-        <div class="project-grid">
-          <!-- 复制一张 card 就能加新项目 -->
-          <article class="project-card">
-            <div class="project-head">
-              <h3><a href="https://github.com/baozhaoqin" target="_blank" rel="noopener">个人主页</a></h3>
-              <span class="dot"></span>
-            </div>
-            <p>就是你正在看的这个页面，纯静态、零依赖，托管在 GitHub Pages 上。</p>
-            <ul class="tag-list small">
-              <li>HTML</li><li>CSS</li><li>GitHub Pages</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-head">
-              <h3><a href="https://github.com/baozhaoqin" target="_blank" rel="noopener">学习笔记仓库</a></h3>
-              <span class="dot"></span>
-            </div>
-            <p>把刷题与课程笔记结构化整理，方便复习与检索。</p>
-            <ul class="tag-list small">
-              <li>Markdown</li><li>笔记</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-head">
-              <h3><a href="https://github.com/baozhaoqin" target="_blank" rel="noopener">待补充项目</a></h3>
-              <span class="dot"></span>
-            </div>
-            <p>这里留给下一个想法，做出来了就补上。</p>
-            <ul class="tag-list small">
-              <li>敬请期待</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 学习笔记 ===== -->
-    <section class="section" id="notes">
-      <div class="wrap">
-        <h2 class="section-title"><span class="num">03</span>学习笔记</h2>
-        <p class="section-sub">持续更新中，记录一些踩坑与总结。</p>
-
-        <ul class="note-list">
-          <!-- 想加一条就复制一组 li -->
-          <li>
-            <a href="#">
-              <span class="note-date">2026-09</span>
-              <span class="note-title">如何用 GitHub Pages 免费搭建个人网站</span>
-              <span class="note-arrow">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="note-date">2026-09</span>
-              <span class="note-title">GitHub Desktop 常用操作速查</span>
-              <span class="note-arrow">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="note-date">2026-09</span>
-              <span class="note-title">我的学习方法与复盘习惯</span>
-              <span class="note-arrow">→</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== 联系 ===== -->
-    <section class="section section-alt" id="contact">
-      <div class="wrap">
-        <h2 class="section-title"><span class="num">04</span>联系我</h2>
-        <p class="section-sub">欢迎交流，任何问题都可以找我。</p>
-
-        <div class="contact-grid">
-          <a class="contact-card" href="https://github.com/baozhaoqin" target="_blank" rel="noopener">
-            <span class="contact-icon">🐙</span>
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">@baozhaoqin</span>
-          </a>
-          <a class="contact-card" href="mailto:your-email@example.com">
-            <span class="contact-icon">✉️</span>
-            <span class="contact-label">Email</span>
-            <span class="contact-value">your-email@example.com</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> baozhaoqin · Built with ❤️ and plain HTML/CSS</p>
-  </footer>
-
-  <script>
-    // 年份
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 移动端菜单
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-    navLinks.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') navLinks.classList.remove('open');
-    });
-
-    // 滚动时导航栏加阴影
-    const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // 主题切换（记忆用户选择）
-    const themeBtn = document.getElementById('themeBtn');
-    const themeIcon = document.getElementById('themeIcon');
-    const applyTheme = (t) => {
-      document.documentElement.setAttribute('data-theme', t);
-      themeIcon.textContent = t === 'dark' ? '☀️' : '🌙';
-    };
-    const saved = localStorage.getItem('theme');
-    applyTheme(saved || 'light');
-    themeBtn.addEventListener('click', () => {
-      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      localStorage.setItem('theme', next);
-    });
-
-    // 元素进入视口时淡入
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (en.isIntersecting) {
-          en.target.classList.add('visible');
-          io.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.card, .project-card, .note-list li, .contact-card')
-      .forEach((el) => { el.classList.add('reveal'); io.observe(el); });
-  </script>
+<footer class="footer">
+  <p>© <span id="year"></span> baozhaoqin · Built with ❤️ and plain HTML/CSS</p>
+</footer>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

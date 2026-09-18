@@ -1,0 +1,224 @@
+/* ===========================================================
+   components.css — 可复用组件：按钮 / 卡片 / 标签 / 项目卡 /
+   笔记列表 / 联系卡 / 头像 / 滚动淡入
+   =========================================================== */
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform .18s ease, box-shadow .25s ease, background .2s ease;
+}
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  box-shadow: 0 8px 22px rgba(79, 70, 229, .32);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(79, 70, 229, .42); }
+.btn-ghost {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+.btn-ghost:hover { transform: translateY(-2px); border-color: var(--accent); }
+
+/* 主题 / 菜单按钮 */
+.theme-btn,
+.menu-btn {
+  width: 38px; height: 38px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+  transition: transform .18s ease, border-color .2s ease;
+}
+.theme-btn:hover, .menu-btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+
+.menu-btn { display: none; flex-direction: column; gap: 4px; }
+.menu-btn span {
+  width: 16px; height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: .2s ease;
+}
+
+/* ---------- 品牌标识 ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+.brand-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* ---------- 头像 ---------- */
+.avatar {
+  width: 92px; height: 92px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6 45%, #06b6d4);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, .38);
+}
+
+/* ---------- 通用卡片 ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+.card h3 { font-size: 16.5px; margin-bottom: 12px; }
+.card p { color: var(--text-soft); font-size: 14.8px; }
+.card p + p { margin-top: 10px; }
+.card strong { color: var(--text); }
+
+/* ---------- 标签 ---------- */
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-list li {
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.tag-list.small li { font-size: 12px; padding: 4px 10px; }
+
+/* ---------- 项目卡 ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+.project-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.project-head h3 { font-size: 17px; }
+.project-head h3 a { transition: color .2s ease; }
+.project-head h3 a:hover { color: var(--accent); }
+.project-head .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, .16);
+  flex: 0 0 auto;
+}
+.project-card p { color: var(--text-soft); font-size: 14.6px; flex: 1; }
+
+/* ---------- 笔记列表 ---------- */
+.note-list { display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
+.note-list a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.note-list a:hover {
+  transform: translateX(6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.note-date {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+.note-title { flex: 1; font-size: 15.2px; }
+.note-arrow { color: var(--text-soft); transition: transform .22s ease; }
+.note-list a:hover .note-arrow { transform: translateX(4px); color: var(--accent); }
+
+/* ---------- 联系卡 ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.contact-icon { font-size: 22px; }
+.contact-label { font-size: 13px; color: var(--text-soft); letter-spacing: .06em; text-transform: uppercase; }
+.contact-value { font-weight: 600; font-size: 15px; word-break: break-all; }
+
+/* ---------- 滚动淡入（由 reveal.js 添加 visible） ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s cubic-bezier(.22,.61,.36,1), transform .6s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ---------- 响应式（组件部分） ---------- */
+@media (max-width: 760px) {
+  .note-list a { gap: 12px; padding: 16px 16px; }
+  .note-title { font-size: 14.6px; }
+}

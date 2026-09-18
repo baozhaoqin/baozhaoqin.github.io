@@ -1,0 +1,22 @@
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-dot"></span>{{site.brand}}
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      {{#for nav as link}}
+      <a href="{{link.href}}">{{link.text}}</a>
+      {{/for}}
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="切换主题">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

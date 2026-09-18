@@ -1,0 +1,16 @@
+<section class="section section-alt" id="contact">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">{{contact.num}}</span>{{contact.title}}</h2>
+    <p class="section-sub">{{contact.sub}}</p>
+
+    <div class="contact-grid">
+      {{#for contact.items as c}}
+      <a class="contact-card" href="{{c.href}}"{{#if c.external}} target="_blank" rel="noopener"{{/if}}>
+        <span class="contact-icon">{{c.icon}}</span>
+        <span class="contact-label">{{c.label}}</span>
+        <span class="contact-value">{{c.value}}</span>
+      </a>
+      {{/for}}
+    </div>
+  </div>
+</section>

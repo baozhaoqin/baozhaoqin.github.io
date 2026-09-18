@@ -1,0 +1,15 @@
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="avatar">{{hero.avatar}}</div>
+    <p class="hero-hello">{{hero.hello}}</p>
+    <h1 class="hero-name">{{hero.name}}</h1>
+    <p class="hero-tagline">{{hero.tagline}}</p>
+    <p class="hero-desc">{{hero.desc}}</p>
+    <div class="hero-btns">
+      {{#for hero.buttons as btn}}
+      <a class="btn btn-{{btn.style}}" href="{{btn.href}}"{{#if btn.external}} target="_blank" rel="noopener"{{/if}}>{{btn.text}}</a>
+      {{/for}}
+    </div>
+  </div>
+</section>

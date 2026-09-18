@@ -1,0 +1,23 @@
+<section class="section section-alt" id="projects">
+  <div class="wrap">
+    <h2 class="section-title"><span class="num">{{projects.num}}</span>{{projects.title}}</h2>
+    <p class="section-sub">{{projects.sub}}</p>
+
+    <div class="project-grid">
+      {{#for projects.items as item}}
+      <article class="project-card">
+        <div class="project-head">
+          <h3><a href="{{item.url}}"{{#if item.external}} target="_blank" rel="noopener"{{/if}}>{{item.name}}</a></h3>
+          <span class="dot"></span>
+        </div>
+        <p>{{item.desc}}</p>
+        <ul class="tag-list small">
+          {{#for item.tags as tag}}
+          <li>{{tag}}</li>
+          {{/for}}
+        </ul>
+      </article>
+      {{/for}}
+    </div>
+  </div>
+</section>

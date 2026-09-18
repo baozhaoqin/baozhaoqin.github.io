@@ -1,0 +1,103 @@
+{
+  "site": {
+    "brand": "baozhaoqin",
+    "title": "baozhaoqin · Personal Homepage",
+    "description": "覃宝钊 的个人主页 —— 独立开发者，记录项目、学习笔记与联系方式。",
+    "author": "覃宝钊",
+    "github": "https://github.com/baozhaoqin",
+    "email": "your-email@example.com"
+  },
+
+  "nav": [
+    { "href": "#about",    "text": "关于我" },
+    { "href": "#projects", "text": "项目" },
+    { "href": "#notes",    "text": "学习笔记" },
+    { "href": "#contact",  "text": "联系" }
+  ],
+
+  "hero": {
+    "avatar": "BZ",
+    "hello": "Hi, I'm",
+    "name": "覃宝钊",
+    "tagline": "独立开发者 · 热爱独立开发，保持持续学习",
+    "desc": "我是覃宝钊，一名独立开发者。这里记录我做的项目、整理的学习笔记，以及一路上不断学习和折腾的想法。欢迎随便逛逛。",
+    "buttons": [
+      { "text": "看看我的项目", "href": "#projects", "style": "primary", "external": false },
+      { "text": "GitHub", "href": "https://github.com/baozhaoqin", "style": "ghost", "external": true }
+    ]
+  },
+
+  "about": {
+    "num": "01",
+    "title": "关于我",
+    "cards": [
+      {
+        "title": "👋 简单介绍",
+        "paragraphs": [
+          "你好，我是 <strong>覃宝钊</strong>，一名独立开发者。平时热爱独立开发，也始终保持着不断学习的心态，喜欢用代码把想法做成看得见的产品。",
+          "这个网站是我的技术自留地，会持续更新项目、学习记录与踩坑总结。"
+        ]
+      },
+      {
+        "title": "🧰 正在折腾",
+        "tags": ["独立开发", "HTML / CSS / JavaScript", "Python", "持续学习"]
+      },
+      {
+        "title": "🎯 目标",
+        "paragraphs": [
+          "坚持独立开发，把脑中的想法落地成真正能用的产品；保持每天学习一点点，把零散的知识串成自己的体系。"
+        ]
+      }
+    ]
+  },
+
+  "projects": {
+    "num": "02",
+    "title": "项目",
+    "sub": "一些我在做的东西，点标题可以跳到对应仓库。",
+    "items": [
+      {
+        "name": "个人主页",
+        "url": "https://github.com/baozhaoqin",
+        "external": true,
+        "desc": "就是你正在看的这个页面，纯静态、零依赖，托管在 GitHub Pages 上。",
+        "tags": ["HTML", "CSS", "GitHub Pages"]
+      },
+      {
+        "name": "学习笔记仓库",
+        "url": "https://github.com/baozhaoqin",
+        "external": true,
+        "desc": "把刷题与课程笔记结构化整理，方便复习与检索。",
+        "tags": ["Markdown", "笔记"]
+      },
+      {
+        "name": "待补充项目",
+        "url": "https://github.com/baozhaoqin",
+        "external": true,
+        "desc": "这里留给下一个想法，做出来了就补上。",
+        "tags": ["敬请期待"]
+      }
+    ]
+  },
+
+  "notes": {
+    "num": "03",
+    "title": "学习笔记",
+    "sub": "持续更新中，记录一些踩坑与总结。",
+    "items": [
+      { "date": "2026-09", "title": "如何用 GitHub Pages 免费搭建个人网站", "url": "#" },
+      { "date": "2026-09", "title": "GitHub Desktop 常用操作速查", "url": "#" },
+      { "date": "2026-09", "title": "我的学习方法与复盘习惯", "url": "#" }
+    ]
+  },
+
+  "contact": {
+    "num": "04",
+    "title": "联系我",
+    "sub": "欢迎交流，任何问题都可以找我。",
+    "items": [
+      { "icon": "🐙", "label": "GitHub", "value": "@baozhaoqin", "href": "https://github.com/baozhaoqin", "external": true },
+      { "icon": "✉️", "label": "Email", "value": "your-email@example.com", "href": "mailto:your-email@example.com", "external": false }
+    ]
+  }
+}
